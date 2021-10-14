@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 1,
+    "Name": "Adidas Originals"
+  },
+  {
+    "Id": 2,
+    "Name": "Nike Sportswear"
+  },
+  {
+    "Id": 3,
+    "Name": "LEVI'S"
+  },
+  {
+    "Id": 4,
+    "Name": "Urban Classics"
+  },
+  {
+    "Id": 5,
+    "Name": "Vila"
+  },
+  {
+    "Id": 6,
+    "Name": "Only"
+  }
+]
