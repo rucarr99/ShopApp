@@ -1,13 +1,13 @@
 <div class="mt-4" [formGroup]="checkoutForm">
   <div class="d-flex justify-content-between align-items-center">
-    <h4>Shipping Address</h4>
+    <h4>Shipping address</h4>
     <button
       (click)="saveUserAddress()"
+      class="btn btn-outline-success mb-3"
       [disabled]="
         !checkoutForm.get('addressForm').valid ||
         !checkoutForm.get('addressForm').dirty
       "
-      class="btn btn-outline-success mb-3"
     >
       Save as default address
     </button>
@@ -15,13 +15,13 @@
   <div class="row" formGroupName="addressForm">
     <div class="form-group col-6">
       <app-text-input
-        [label]="'First Name'"
+        [label]="'First name'"
         formControlName="firstName"
       ></app-text-input>
     </div>
     <div class="form-group col-6">
       <app-text-input
-        [label]="'Last Name'"
+        [label]="'Last name'"
         formControlName="lastName"
       ></app-text-input>
     </div>
@@ -42,8 +42,8 @@
     </div>
     <div class="form-group col-6">
       <app-text-input
-        [label]="'Zip Code'"
-        formControlName="zipcode"
+        [label]="'Zip code'"
+        formControlName="zipCode"
       ></app-text-input>
     </div>
   </div>
@@ -53,9 +53,13 @@
   class="float-none d-flex justify-content-between flex-column flex-lg-row mb-5"
 >
   <button class="btn btn-outline-primary" routerLink="/basket">
-    <i class="fa fa-angle-left">Back to basket</i>
+    <i class="fa fa-angle-left"></i> Back to basket
   </button>
-  <button class="btn btn-primary" cdkStepperNext>
-    <i class="fa fa-angle-right"> Go To Delivery</i>
+  <button
+    [disabled]="checkoutForm.get('addressForm').invalid"
+    class="btn btn-primary"
+    cdkStepperNext
+  >
+    Go to delivery <i class="fa fa-angle-right"></i>
   </button>
 </div>
